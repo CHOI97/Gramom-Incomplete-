@@ -4,12 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SplashActivity"
+    tools:context=".MainActivity"
     android:orientation="vertical"
     >
-    <include
-        layout="@layout/toolbar"
-        android:id="@+id/toolbar"/>
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/toolbar"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="그래 맘"
+                android:textColor="#5C0BEC"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+<!--Button 왼쪽으로 옮기는거 수정해야함 현재 이미지뷰로 수정 함-->
+            <Button
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="17dp"
+                android:gravity="left"
+                android:text="back"
+                android:textSize="10sp"
+                android:id="@+id/btn_back_1"/>
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
     <ImageView
         android:id="@+id/title_logo"
         android:layout_width="100dp"
